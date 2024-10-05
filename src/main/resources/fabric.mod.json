@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "story-mode-music",
+	"version": "${version}",
+	"name": "Story Mode Music",
+	"description": "Inserts soundtracks from Minecraft: Story Mode.",
+	"authors": [
+		"nights"
+	],
+	"contact": {
+		"homepage": "https://eternights.github.io/",
+		"sources": "https://github.com/eternights/minecraft.story-mode-music/"
+	},
+	"license": "MIT License",
+	"icon": "assets/story-mode-music/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.nights.smmusic.StoryModeMusic"
+		],
+		"client": [
+			"com.nights.smmusic.StoryModeMusicClient"
+		]
+	},
+	"mixins": [
+		"story-mode-music.mixins.json",
+		{
+			"config": "story-mode-music.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
